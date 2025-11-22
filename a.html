@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sorry Sherni Anjali 🐯❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a, #1d0535, #4c1d95);
+      --card-bg: rgba(15, 23, 42, 0.92);
+      --accent: #f472b6;
+      --accent-soft: rgba(244, 114, 182, 0.18);
+      --accent-strong: #fb7185;
+      --text: #f9fafb;
+      --muted: #cbd5f5;
+      --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.7);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-pill: 999px;
+      --transition-fast: 0.2s ease-out;
+      --transition-med: 0.35s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-image: var(--bg-gradient);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      padding: 24px 12px;
+      overflow-x: hidden;
+    }
+
+    .sky-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(244, 114, 182, 0.24), transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(59, 130, 246, 0.22), transparent 55%),
+        radial-gradient(circle at 75% 25%, rgba(251, 113, 133, 0.18), transparent 55%);
+      mix-blend-mode: screen;
+      opacity: 0.9;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .floating-hearts span {
+      position: absolute;
+      font-size: 16px;
+      opacity: 0.2;
+      animation: floatUp 14s linear infinite;
+    }
+
+    .floating-hearts span:nth-child(odd) {
+      animation-duration: 18s;
+      font-size: 13px;
+    }
+
+    .floating-hearts span:nth-child(3n) {
+      animation-duration: 20s;
+      font-size: 20px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(110vh) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      50% {
+        transform: translateY(50vh) translateX(20px);
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.1;
+      }
+      100% {
+        transform: translateY(-10vh) translateX(-10px);
+        opacity: 0;
+      }
+    }
+
+    .app-shell {
+      width: 100%;
+      max-width: 980px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+      border-radius: 28px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      backdrop-filter: blur(26px);
+      padding: 22px 20px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .app-shell {
+        padding: 28px 30px 30px;
+      }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(248, 113, 113, 0.16), transparent 60%);
+      filter: blur(8px);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .sparkle-1 {
+      top: -60px;
+      left: -40px;
+    }
+    .sparkle-2 {
+      bottom: -80px;
+      right: -40px;
+    }
+
+    header.hero {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 820px) {
+      header.hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+    }
+
+    .hero-left {
+      flex: 1.3;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 0 0, rgba(248, 113, 113, 0.24), transparent 55%);
+      border: 1px solid rgba(248, 250, 252, 0.12);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-tag span.heart-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f97373, #e11d48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      animation: pulse 1.5s ease-in-out infinite;
+      box-shadow: 0 0 18px rgba(248, 113, 113, 0.75);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 3vw + 14px, 34px);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+
+    .hero-title span.highlight {
+      background: linear-gradient(120deg, #f97316, #fb7185, #e879f9);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 480px;
+    }
+
+    .hero-subtitle span.name-chip {
+      padding: 2px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      background: rgba(15, 23, 42, 0.7);
+      font-size: 11px;
+      margin-left: 2px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 9px 16px;
+      font-size: 13px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 0 0, #fb7185, #ec4899);
+      color: #0b1020;
+      font-weight: 600;
+      box-shadow: 0 14px 32px rgba(248, 113, 113, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(248, 113, 113, 0.55);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      background: rgba(30, 64, 175, 0.5);
+      border-color: rgba(191, 219, 254, 0.7);
+      color: #e5edff;
+    }
+
+    .btn .pill-icon {
+      font-size: 15px;
+    }
+
+    .hero-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 14px 16px;
+      border-radius: 22px;
+      background: radial-gradient(circle at 0 0, rgba(244, 114, 182, 0.18), transparent 60%), rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      min-width: 250px;
+      max-width: 320px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-emoji {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      font-size: 22px;
+      animation: floatUpDown 3s ease-in-out infinite;
+    }
+
+    .hero-card h3 {
+      font-size: 14px;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-card h3 span.badge {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #e2e8f0;
+    }
+
+    .hero-card p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .tiny-meter-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 4px;
+    }
+
+    .love-meter {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 1px;
+      margin-bottom: 4px;
+      overflow: hidden;
+    }
+
+    .love-meter-fill {
+      height: 100%;
+      width: 96%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #10b981, #facc15, #fb7185);
+      box-shadow: 0 0 16px rgba(248, 113, 113, 0.8);
+      animation: meterGlow 2.9s ease-in-out infinite;
+      transform-origin: left;
+    }
+
+    @keyframes meterGlow {
+      0%, 100% {
+        filter: brightness(1);
+        transform: scaleX(1);
+      }
+      50% {
+        filter: brightness(1.2);
+        transform: scaleX(1.03);
+      }
+    }
+
+    .hero-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      color: rgba(226, 232, 240, 0.85);
+    }
+
+    .hero-card-footer span.tag-soft {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(8, 47, 73, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      font-size: 10px;
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1.3fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    nav.side-nav {
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 10px 10px 12px;
+      height: fit-content;
+      position: sticky;
+      top: 10px;
+    }
+
+    .nav-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .nav-title span.small-dot {
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #22c55e, #16a34a);
+      border-radius: 999px;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .nav-btn {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      padding: 7px 9px;
+      font-size: 12px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+    }
+
+    .nav-btn span.icon {
+      font-size: 15px;
+    }
+
+    .nav-btn span.label-main {
+      flex: 1;
+    }
+
+    .nav-btn span.label-mini {
+      font-size: 9px;
+      text-transform: uppercase;
+      color: rgba(148, 163, 184, 0.9);
+      letter-spacing: 0.14em;
+    }
+
+    .nav-btn:hover {
+      background: rgba(30, 64, 175, 0.4);
+      border-color: rgba(129, 140, 248, 0.7);
+      transform: translateY(-1px);
+      color: #e5edff;
+    }
+
+    .nav-btn.active {
+      background: radial-gradient(circle at 0 0, rgba(248, 113, 113, 0.3), transparent 70%);
+      border-color: rgba(248, 113, 113, 0.8);
+      color: #fef9c3;
+      box-shadow: 0 0 20px rgba(248, 113, 113, 0.55);
+    }
+
+    .nav-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      font-size: 10px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .nav-footer span.chip {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+    }
+
+    .content {
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: 22px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 14px 14px 16px;
+      overflow: hidden;
+      min-height: 260px;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        padding: 16px 18px 20px;
+      }
+    }
+
+    .page {
+      display: none;
+      animation: fadeInUp var(--transition-med);
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .page-header h2 {
+      font-size: 15px;
+    }
+
+    .page-header span.tag {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: rgba(148, 163, 184, 0.96);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .page-body {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .heart-letter {
+      margin-top: 8px;
+      padding: 10px 11px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 0 0, rgba(248, 113, 113, 0.18), transparent 70%), rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(248, 113, 113, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heart-letter::before {
+      content: "💌";
+      position: absolute;
+      right: 10px;
+      bottom: 4px;
+      font-size: 18px;
+      opacity: 0.8;
+      animation: floatUpDown 2.8s ease-in-out infinite;
+    }
+
+    .letter-preview {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .letter-full {
+      font-size: 12px;
+      margin-top: 6px;
+      display: none;
+      line-height: 1.6;
+    }
+
+    .letter-full.visible {
+      display: block;
+    }
+
+    .letter-toggle {
+      margin-top: 8px;
+      font-size: 11px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px dashed rgba(248, 113, 113, 0.7);
+      color: #fecaca;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .chip-soft {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .reason-card {
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 9px 10px;
+      font-size: 12px;
+    }
+
+    .reason-card-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .reason-card-header span.icon {
+      font-size: 16px;
+    }
+
+    .reason-card-body {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .memory {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 8px 9px;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12), transparent 70%), rgba(15, 23, 42, 0.85);
+    }
+
+    .memory-title {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 2px;
+      color: #e5e7eb;
+    }
+
+    .memory-meta {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 4px;
+    }
+
+    .memory-body {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .promise-list {
+      margin-top: 4px;
+      list-style: none;
+      padding-left: 0;
+      counter-reset: promise;
+    }
+
+    .promise-list li {
+      counter-increment: promise;
+      margin-top: 6px;
+      padding: 7px 8px;
+      border-radius: 13px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .promise-list li::before {
+      content: "#" counter(promise);
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: rgba(226, 232, 240, 0.9);
+      margin-top: 1px;
+    }
+
+    .game-box {
+      margin-top: 8px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 10px 10px 9px;
+      background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.22), transparent 70%), rgba(15, 23, 42, 0.9);
+      font-size: 12px;
+    }
+
+    .game-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .game-header span.level {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(129, 140, 248, 0.7);
+      padding: 1px;
+      margin: 6px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #22c55e, #eab308, #fb7185);
+      transition: width 0.15s ease-out;
+    }
+
+    .game-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .btn-heart {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(129, 140, 248, 0.8);
+      color: #e5e7eb;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .btn-heart:hover {
+      background: rgba(55, 65, 194, 0.9);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(30, 64, 175, 0.8);
+    }
+
+    .secret-message {
+      display: none;
+      margin-top: 8px;
+      font-size: 12px;
+      padding: 8px 9px;
+      border-radius: 13px;
+      border: 1px dashed rgba(248, 113, 113, 0.8);
+      background: rgba(15, 23, 42, 0.96);
+      color: #fecaca;
+    }
+
+    .secret-message.visible {
+      display: block;
+      animation: fadeInUp var(--transition-med);
+    }
+
+    .quote-box {
+      margin-top: 6px;
+      padding: 8px 9px;
+      border-left: 3px solid rgba(248, 113, 113, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 12px;
+      font-size: 11px;
+      color: rgba(226, 232, 240, 0.9);
+    }
+
+    .quote-box span.author {
+      display: block;
+      margin-top: 3px;
+      font-size: 10px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    footer.app-footer {
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      font-size: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    footer.app-footer span.heart-name {
+      color: #fecaca;
+    }
+
+    @media (max-width: 480px) {
+      header.hero {
+        margin-bottom: 14px;
+      }
+      .hero-card {
+        margin-top: 4px;
+      }
+      footer.app-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky-glow"></div>
+
+  <div class="floating-hearts">
+    <!-- Random hearts - positions set via JS -->
+    <span>❤️</span>
+    <span>🩷</span>
+    <span>💕</span>
+    <span>💖</span>
+    <span>💘</span>
+    <span>💞</span>
+    <span>💗</span>
+    <span>💟</span>
+  </div>
+
+  <div class="app-shell">
+    <div class="sparkle sparkle-1"></div>
+    <div class="sparkle sparkle-2"></div>
+
+    <header class="hero">
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="heart-dot">❤</span>
+          <span>Special Apology Drop</span>
+        </div>
+
+        <h1 class="hero-title">
+          Sorry <span class="highlight">Sherni Anjali</span> 🐯
+        </h1>
+
+        <p class="hero-subtitle">
+          Yeh chhota sa landing page sirf tumhaare liye hai –
+          ek officially cute tareeka tumse kehne ka <span class="name-chip">“I’m really really sorry &amp; I love you”</span>.
+        </p>
+
+        <div class="hero-cta-row">
+          <button class="btn btn-primary" data-nav-target="home">
+            <span class="pill-icon">💌</span>
+            <span>Open My Dil Ki Baat</span>
+          </button>
+          <button class="btn btn-ghost" data-nav-target="game">
+            <span class="pill-icon">🎮</span>
+            <span>Unlock Secret Sorry</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-emoji">🐯</div>
+          <h3>
+            My Sherni's Happiness
+            <span class="badge">live meter</span>
+          </h3>
+          <p>
+            Agar tum hasta hua face leke is page ko close kar do,
+            toh samajh lo mission successful. Agar thodi si bhi smile aa gayi ho,
+            toh mera half sorry accept ho gaya. ✨
+          </p>
+          <div class="tiny-meter-label">Current Sorry Effort</div>
+          <div class="love-meter">
+            <div class="love-meter-fill"></div>
+          </div>
+          <div class="hero-card-footer">
+            <span>Target: <strong>100% khushi</strong></span>
+            <span class="tag-soft">For Anjali only ♡</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="side-nav">
+        <div class="nav-title">
+          <span>Navigation for Sherni</span>
+          <span class="small-dot"></span>
+        </div>
+        <div class="nav-list">
+          <button class="nav-btn active" data-nav-target="home">
+            <span class="icon">💌</span>
+            <span class="label-main">Dil se Sorry</span>
+            <span class="label-mini">start here</span>
+          </button>
+
+          <button class="nav-btn" data-nav-target="reasons">
+            <span class="icon">💘</span>
+            <span class="label-main">Why You’re Special</span>
+            <span class="label-mini">reasons list</span>
+          </button>
+
+          <button class="nav-btn" data-nav-target="memories">
+            <span class="icon">🕰️</span>
+            <span class="label-main">Hamari Yaadein</span>
+            <span class="label-mini">small timeline</span>
+          </button>
+
+          <button class="nav-btn" data-nav-target="promises">
+            <span class="icon">🤝</span>
+            <span class="label-main">Promises to You</span>
+            <span class="label-mini">officially noted</span>
+          </button>
+
+          <button class="nav-btn" data-nav-target="game">
+            <span class="icon">🎮</span>
+            <span class="label-main">Sorry Unlock Game</span>
+            <span class="label-mini">tap hearts</span>
+          </button>
+        </div>
+        <div class="nav-footer">
+          <span class="chip">Made with 💖 by your pagal</span>
+          <span>v1.0</span>
+        </div>
+      </nav>
+
+      <section class="content">
+        <!-- Page 1: Dil se Sorry -->
+        <div class="page active" id="home">
+          <div class="page-header">
+            <h2>Ek Simple sa “Sorry”… par Bhohot Dil Se 🥺</h2>
+            <span class="tag">main letter</span>
+          </div>
+          <div class="page-body">
+            <p>
+              Anjali, meri pyaari <strong>Sherni</strong>, mujhe pata hai main galat tha
+              aur shayad maine tumhe hurt kiya. Shayad words se, ya attitude se,
+              ya phir bas tumhari feelings ko samajhne mein late ho gaya. Jo bhi reason ho,
+              <strong>mujhe genuinely bura lag raha hai</strong>.
+            </p>
+
+            <div class="heart-letter">
+              <strong>From your pagal:</strong>
+              <p class="letter-preview">
+                Tum gussa ho sakti ho, baat band kar sakti ho, lekin mujhe
+                tumse gussa hone ka bhi haq nahi lagta, kyunki tum meri
+                zindagi ka sabse pyaara hissa ho. 💗
+              </p>
+              <p class="letter-full" id="fullLetter">
+                Main perfect nahi hoon, galtiyan karta hoon, kabhi
+                overreact kar deta hoon, kabhi tumhari baaton ko lightly
+                le leta hoon. Par ek baat 100% pakki hai:
+                <br /><br />
+                <strong>1.</strong> Tum mere liye sirf girlfriend nahi ho,
+                tum meri best friend, meri complaint box, meri happy
+                place, sab kuch ho.
+                <br />
+                <strong>2.</strong> Jab tum naraz hoti ho na, lagta hai
+                jaise duniya ka brightness low ho gaya ho. Insta, reels,
+                games sab boring lagte hain.
+                <br />
+                <strong>3.</strong> Main promise karta hoon, main apne
+                aap pe kaam karunga, taaki next time tumhari aankhon mein
+                sirf khushi ho, aansu kabhi na aaye – especially meri
+                wajah se toh bilkul bhi nahi.
+                <br /><br />
+                Bas itna kehna hai Anjali –
+                <strong>please ek chance aur de do</strong>. Iss baar
+                sirf “sorry” nahi, poora effort dikhane ka plan hai. 💘
+              </p>
+              <button class="letter-toggle" id="letterToggle">
+                <span>Read Full Apology</span>
+                <span>▼</span>
+              </button>
+            </div>
+
+            <div class="chips-row">
+              <span class="chip-soft">Status: Tumse udaas hu, par haar nahi maana 😔</span>
+              <span class="chip-soft">Mission: Anjali ki smile wapas lana 😁</span>
+              <span class="chip-soft">Code name: Operation Sherni-Khush</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 2: Reasons -->
+        <div class="page" id="reasons">
+          <div class="page-header">
+            <h2>Kyun meri Sherni sabse special hai? 💘</h2>
+            <span class="tag">reasons list</span>
+          </div>
+          <div class="page-body">
+            <p>
+              Thoda sa recap, taaki tumhe bhi yaad rahe ki tum kitni
+              zyada important ho mere liye. Agar main kabhi stupid behave karun,
+              yeh list yaad dilayegi ki <strong>tumse zyada precious kuch nahi</strong>.
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">🌞</span>
+                  <span>1. Tumhari Smile</span>
+                </div>
+                <div class="reason-card-body">
+                  Jab tum muskuraati ho na, literally lagta hai
+                  notification aa gaya “Happiness updated successfully”.
+                  Tumhari smile mera daily motivation hai.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">🐯</span>
+                  <span>2. Tumhara Sherni Mode</span>
+                </div>
+                <div class="reason-card-body">
+                  Mujhe tumhara possessive, thoda sa gussa, thoda sa attitude
+                  wala version bhi pasand hai, kyunki usmein bhi pyaar chhupa hota hai.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">🧠</span>
+                  <span>3. Tumhara Dimag</span>
+                </div>
+                <div class="reason-card-body">
+                  Tum smart ho, sensible ho, aur har baat pe itna
+                  pure tariqe se sochti ho, ki kabhi kabhi lagta hai “yeh ladki
+                  mujhe mil kaise gayi?”.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">🤗</span>
+                  <span>4. Tumhara Care</span>
+                </div>
+                <div class="reason-card-body">
+                  Chahe main reply late karu ya mood off ho, tum phir bhi
+                  care karti ho. Tumhara “khana khaaya?” wale messages
+                  hi asli love story hai.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">🎧</span>
+                  <span>5. Hamari Choti Choti Baatein</span>
+                </div>
+                <div class="reason-card-body">
+                  Songs share karna, reels bhejna, random memes,
+                  late night talks – yeh sab meri life ke favourite
+                  highlights hain.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-card-header">
+                  <span class="icon">💖</span>
+                  <span>6. Tum Bas… Tum</span>
+                </div>
+                <div class="reason-card-body">
+                  Sab kuch milakar – tum jaisi ho, waise hi perfect ho mere liye.
+                  No filter, no change required. Sirf thoda sa patience mujhpe. 😅
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-box">
+              “Agar har baar tumhare baare mein sochne pe ek star milta,
+              toh aasmaan khali ho chuka hota.”  
+              <span class="author">– Tumhara hi pagal admirer ✨</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 3: Memories -->
+        <div class="page" id="memories">
+          <div class="page-header">
+            <h2>Hamari Yaadein – Mini Timeline 🕰️</h2>
+            <span class="tag">memories</span>
+          </div>
+          <div class="page-body">
+            <p>
+              Thodi yaadein yaad karo, taaki gussa thoda melt ho jaaye.
+              Jo bhi ho, <strong>hamari story worth fighting for hai</strong>.
+            </p>
+
+            <div class="timeline">
+              <div class="memory">
+                <div class="memory-title">Jab pehli baar baat hui 💬</div>
+                <div class="memory-meta">chapter 01 — shuruaat</div>
+                <p class="memory-body">
+                  Pehla “hi” normal tha, par pata nahi kyun ussi din se
+                  tum thodi alag si lagi. Shayad destiny ne wahi se
+                  secret plan shuru kiya tha.
+                </p>
+              </div>
+
+              <div class="memory">
+                <div class="memory-title">Hamari pehli mast wali hansi 😁</div>
+                <div class="memory-meta">chapter 02 — connection</div>
+                <p class="memory-body">
+                  Yaad hai jab hum dono random topic pe hass hass ke
+                  pagal ho rahe the? Ussi din realize hua ki “haan, yeh
+                  insan important banne wala hai”.
+                </p>
+              </div>
+
+              <div class="memory">
+                <div class="memory-title">Tumhara “Mujhe farq padta hai” moment 💗</div>
+                <div class="memory-meta">chapter 03 — care</div>
+                <p class="memory-body">
+                  Jab tumne mujhe genuinely samjhaya, care dikhayi,
+                  scold bhi kiya – tab laga, koi toh hai jo dil se
+                  concerned hai mere liye.
+                </p>
+              </div>
+
+              <div class="memory">
+                <div class="memory-title">Aaj – jab tum naraz ho 🥺</div>
+                <div class="memory-meta">chapter 04 — lesson</div>
+                <p class="memory-body">
+                  Aaj ka scene ho sakta hai thoda sad ho, lekin yahi
+                  moments hume better banate hain. Main yeh yaad rakhoonga,
+                  taaki same galti dobara na ho.
+                </p>
+              </div>
+            </div>
+
+            <div class="chips-row">
+              <span class="chip-soft">Goal: New happy memories banani hai 💕</span>
+              <span class="chip-soft">Condition: Tum ek baar smile kar do 😊</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 4: Promises -->
+        <div class="page" id="promises">
+          <div class="page-header">
+            <h2>Official Promises to My Sherni 🤝</h2>
+            <span class="tag">commitments</span>
+          </div>
+          <div class="page-body">
+            <p>
+              Yeh sirf dialogue nahi, small-small actionable promises hain.
+              Tum jab bhi chaaho, mujhe inki yaad dila sakti ho.  
+              <strong>Agreement type:</strong> lifetime, auto-renewal with extra pyaar. 💘
+            </p>
+
+            <ul class="promise-list">
+              <li>
+                Main tumhari baat seriously sunnunga – bina interrupt kiye,
+                bina overreact kiye. Pehle samjhoonga, phir bolunga.
+              </li>
+              <li>
+                Agar main galat hoon, toh ego side pe rakh ke
+                <strong>pehle sorry bolunga</strong>. Tumhe kabhi yeh feel
+                nahi hone dunga ki tum akeli ho fight mein.
+              </li>
+              <li>
+                Jitna time possible hoga, utna honestly tumhein priority dunga –
+                messages, calls, ya sirf “how are you?” checks.
+              </li>
+              <li>
+                Tumhari feelings ka mazaak kabhi nahi udaunga – chaahe
+                woh chhoti baat ho ya badi, agar tumhare liye important hai,
+                toh mere liye automatic important ho jaayegi.
+              </li>
+              <li>
+                Aur sabse important – <strong>har situation mein tumhara saath dunga</strong>,
+                chahe tum khush ho, udaas ho, gusse mein ho, ya overthinking mode mein.
+              </li>
+            </ul>
+
+            <div class="chips-row">
+              <span class="chip-soft">Signed: Tumhara pagal 💙</span>
+              <span class="chip-soft">Witness: Ye landing page 🧾</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 5: Game -->
+        <div class="page" id="game">
+          <div class="page-header">
+            <h2>Small Game – Tap Hearts to Unlock Secret Message 🎮</h2>
+            <span class="tag">interactive</span>
+          </div>
+          <div class="page-body">
+            <p>
+              Rule simple hai, <strong>Sherni</strong> –
+              jitne zyada hearts tap karogi, utna mera sorry unlock hoga.
+              Target <strong>10 hearts</strong>, phir secret message automatically open ho jaayega. 💖
+            </p>
+
+            <div class="game-box">
+              <div class="game-header">
+                <span>Hearts tapped: <strong id="heartCount">0</strong> / 10</span>
+                <span class="level">level: maafi mission</span>
+              </div>
+
+              <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+
+              <div class="game-buttons">
+                <button class="btn-heart" id="tapHeartBtn">
+                  <span>💗</span>
+                  <span>Tap to Add Pyaar</span>
+                </button>
+                <button class="btn-heart" id="resetHeartBtn">
+                  <span>🔄</span>
+                  <span>Reset Counter</span>
+                </button>
+              </div>
+
+              <div class="secret-message" id="secretMessage">
+                Anjali, agar tum yahan tak aa gayi ho, toh iska matlab tumne
+                ek chance toh de hi diya hai mujhe.  
+                <br /><br />
+                <strong>Officially likh ke:</strong>  
+                I am truly, deeply, honestly sorry.  
+                Main tumhe lose nahi karna chahta, na ab, na kabhi.  
+                Tum meri life ka woh part ho, jiske bina poora scene incomplete lagega.  
+                <br /><br />
+                <strong>Can we start fresh?</strong>  
+                Ek naya chapter, jahan main tumhe aur zyada respect,
+                pyaar, time aur importance doon?  
+                <br /><br />
+                Agar haan ho dil mein… bas ek chhoti si smile kar dena.
+                Mujhe pata chal jaayega. 💖
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="app-footer">
+      <span>
+        P.S. Agar tumhe yeh page thoda sa bhi cute lage,
+        toh samajh lena – <span class="heart-name">tumhara pagal literally effort kar raha hai</span>.
+      </span>
+      <span>Made just for: <strong>Anjali (Meri Sherni)</strong> 🐯</span>
+    </footer>
+  </div>
+
+  <script>
+    // Randomly position floating hearts
+    (function positionHearts() {
+      const hearts = document.querySelectorAll(".floating-hearts span");
+      hearts.forEach((heart, index) => {
+        const left = Math.random() * 100;
+        const delay = (index * 3) + Math.random() * 4;
+        const size = 12 + Math.random() * 10;
+        heart.style.left = left + "%";
+        heart.style.animationDelay = delay + "s";
+        heart.style.fontSize = size + "px";
+      });
+    })();
+
+    // Navigation logic
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const pages = document.querySelectorAll(".page");
+    const heroNavButtons = document.querySelectorAll("[data-nav-target]");
+
+    function showPage(targetId) {
+      pages.forEach((page) => {
+        page.classList.toggle("active", page.id === targetId);
+      });
+      navButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-nav-target") === targetId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    navButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-nav-target");
+        showPage(targetId);
+      });
+    });
+
+    heroNavButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-nav-target");
+        showPage(targetId);
+      });
+    });
+
+    // Letter expand / collapse
+    const letterToggle = document.getElementById("letterToggle");
+    const fullLetter = document.getElementById("fullLetter");
+    let letterOpen = false;
+
+    letterToggle.addEventListener("click", () => {
+      letterOpen = !letterOpen;
+      fullLetter.classList.toggle("visible", letterOpen);
+      letterToggle.innerHTML = letterOpen
+        ? '<span>Hide Full Apology</span><span>▲</span>'
+        : '<span>Read Full Apology</span><span>▼</span>';
+    });
+
+    // Sorry unlock game logic
+    const heartCountEl = document.getElementById("heartCount");
+    const progressBar = document.getElementById("progressBar");
+    const secretMessage = document.getElementById("secretMessage");
+    const tapHeartBtn = document.getElementById("tapHeartBtn");
+    const resetHeartBtn = document.getElementById("resetHeartBtn");
+
+    let heartCount = 0;
+    const targetHearts = 10;
+
+    function updateGameUI() {
+      heartCountEl.textContent = heartCount;
+      const percentage = Math.min((heartCount / targetHearts) * 100, 100);
+      progressBar.style.width = percentage + "%";
+
+      if (heartCount >= targetHearts) {
+        secretMessage.classList.add("visible");
+      } else {
+        secretMessage.classList.remove("visible");
+      }
+    }
+
+    tapHeartBtn.addEventListener("click", () => {
+      heartCount++;
+      updateGameUI();
+      tapHeartBtn.classList.add("pressed");
+      setTimeout(() => tapHeartBtn.classList.remove("pressed"), 120);
+    });
+
+    resetHeartBtn.addEventListener("click", () => {
+      heartCount = 0;
+      updateGameUI();
+    });
+
+    // Initial UI update
+    updateGameUI();
+  </script>
+</body>
+</html>
